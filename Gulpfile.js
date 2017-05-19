@@ -16,9 +16,9 @@ var gulp          = require('gulp')
     ,$            = require('gulp-load-plugins')();
 
 var config = {
-  stylesPath            : './assets/src/scss'
-  ,scriptsPath          : './assets/src/js'
-  ,buildPath            : './assets/dist/'
+  stylesPath            : 'assets/src/scss'
+  ,scriptsPath          : 'assets/src/js'
+  ,buildPath            : 'assets/dist/'
 }
 
 /**
@@ -76,23 +76,12 @@ compileScriptsTask('scripts', [
     config.scriptsPath + '/app.js'
 ], 'scripts.js', '/js');
 
-// Styles
+/**
+ * Scripts
+ */
 compileStylesTask('styles', [
   config.stylesPath + '/app.scss'
 ], 'app');
-
-/**
- * BREAK COMPILED CSS TO MULTIPLE FILES FOR IE
- */
-var bless = require('gulp-bless');
-gulp.task('iebless', function() {
-    gulp.src(config.buildPath + '/app.css')
-      .pipe(bless({
-        suffix: '-part'
-      }))
-      .pipe($.cssmin())
-      .pipe(gulp.dest(config.buildPath + '/ieCSS'));
-});
 
 /**
  * WATCHING FOR CHANGES
@@ -101,7 +90,6 @@ gulp.task('watch', function() {
 
   gulp.watch(config.stylesPath   + '/**/*', ['styles']);
   gulp.watch(config.scriptsPath  + '/**/*', ['scripts']);
-  gulp.watch(config.buildPath    + '/css/app.css', ['iebless']);
 
 });
 
@@ -113,7 +101,6 @@ gulp.task('build', function(cb) {
     'clean'
     ,'scripts'
     ,'styles'
-    //,'iebless'
     ,cb
   );
 });

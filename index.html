@@ -2,11 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-csp="" ng-app="boilerplate"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 
 	<head>
-
-		<base href="/">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>Tom Svecak - Xwerx Technical Test</title>
@@ -16,7 +14,11 @@
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/dist/img/favicon.png">
+
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 
 		<!--[if IE]>
 			<link rel="shortcut icon" href="favicon.ico">
@@ -25,24 +27,80 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="assets/dist/css/app.css" />
+		<link href="assets/dist/css/app.css" rel="stylesheet" type="text/css" />
 		<!-- endbuild -->
 
 	</head>
 
-	<body class="main-wrapper">
+	<body>
+        <div class="row">
+            <!-- START xClients -->
+            <section class="xClients">
+                <div class="row">
+                    <div class="small-6 columns">Clients <i class="fa fa-caret-right" aria-hidden="true"></i></div>
+                    <div class="small-6 columns text-right"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 medium-4 columns">Active Clients</div>
+                    <div class="small-12 medium-4 columns">Last 12 months</div>
+                    <div class="small-12 medium-4 columns">Increase</div>
+                </div>
+
+            </section>
+            <!-- END xClients -->
+        
+            <!-- START xAlerts -->
+            <section class="xAlerts">
+                <div class="xAlerts__filters">
+                    <div class="small-6 columns">ALERTS</div>
+                    <div class="small-6 columns text-right">Filters</div>
+                </div>
+
+                <div class="xAlerts__item" ng-repeat="">
+                    <div class="small-12 medium-3 columns">Adam</div>
+                    <div class="small-12 medium-3 columns">Review</div>
+                    <div class="small-12 medium-3 columns">Feb 03</div>
+                    <div class="small-12 medium-3 columns">Low</div>
+                </div>
+                <div class="xAlerts__item" ng-repeat="">
+                    <div class="small-12 medium-3 columns">Adam</div>
+                    <div class="small-12 medium-3 columns">Review</div>
+                    <div class="small-12 medium-3 columns">Feb 03</div>
+                    <div class="small-12 medium-3 columns">Low</div>
+                </div>
+                <div class="xAlerts__item" ng-repeat="">
+                    <div class="small-12 medium-3 columns">Adam</div>
+                    <div class="small-12 medium-3 columns">Review</div>
+                    <div class="small-12 medium-3 columns">Feb 03</div>
+                    <div class="small-12 medium-3 columns">Low</div>
+                </div>
+                <div class="xAlerts__item" ng-repeat="">
+                    <div class="small-12 medium-3 columns">Adam</div>
+                    <div class="small-12 medium-3 columns">Review</div>
+                    <div class="small-12 medium-3 columns">Feb 03</div>
+                    <div class="small-12 medium-3 columns">Low</div>
+                </div>
+                <div class="xAlerts__item" ng-repeat="">
+                    <div class="small-12 medium-3 columns">Adam</div>
+                    <div class="small-12 medium-3 columns">Review</div>
+                    <div class="small-12 medium-3 columns">Feb 03</div>
+                    <div class="small-12 medium-3 columns">Low</div>
+            </section>
+            <!-- END xAlerts -->
+        </div>
 
 	</body>
 
 	<!-- Angular external libraries for application -->
 	<!-- build:angularlibs js/angularlibs.js -->
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- Angular components -->
-	<script type="text/javascript" src="assets/dist/js/app.js"></script>
+	<script type="text/javascript" src="assets/dist/js/scripts.js"></script>
 
 
 </html>

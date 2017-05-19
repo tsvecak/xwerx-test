@@ -4,12 +4,21 @@
 
 /* Utilities */
 // Normalize
-@import "utilities/normalize.css";
+@import "/assets/src/scss/utilities/normalize.css";
 // Skeleton
-@import "utilities/skeleton.css";
+@import "/assets/src/scss/utilities/foundation.min.css";
+// HelpClasses
+@import "utilities/helpClasses";
 
 /* Variables */
 // Colors
 @import "variables/colors";
 // Default
 @import "variables/default";
+
+/* Components */
+// Base styles
+@import "components/xBase";
+
+// Live Feed xClients
+@import "components/xClients";

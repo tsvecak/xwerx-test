@@ -1,0 +1,12 @@
+// Live Feed component SCSS
+.xClients {
+    background: $xDarkBlue;
+    border-radius: $global-radius;
+    padding: 1rem;
+    color: $xBlue;
+    width: 100%;
+    text-transform: uppercase;
+    @media (min-width: 400px) {
+        
+    }
+}
