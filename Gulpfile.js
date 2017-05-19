@@ -61,7 +61,7 @@ function compileStylesTask(taskName, srcFiles, compiledFileName){
           }))
           .pipe($.rename({basename: compiledFileName}))
           .pipe($.cssmin())
-          .pipe(gulp.dest(config.buildPath + '/assets/css/'))
+          .pipe(gulp.dest(config.buildPath + '/css/'))
           .pipe($.size({title:'Styles'}))
           .pipe(notify({message: "Your" + compiledFileName + "is great again", onLast: true}));
 
@@ -91,7 +91,7 @@ gulp.task('iebless', function() {
         suffix: '-part'
       }))
       .pipe($.cssmin())
-      .pipe(gulp.dest(config.buildPath + '/assets/ieCSS'));
+      .pipe(gulp.dest(config.buildPath + '/ieCSS'));
 });
 
 /**
