@@ -25,7 +25,11 @@
 		<![endif]-->
 		<!-- or, set /favicon.ico for IE10 win -->
 		<meta name="msapplication-TileColor" content="#f01d4f">
-
+        <style>
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+            }
+        </style>
 		<!-- CSS -->
 		<link href="assets/dist/css/app.css" rel="stylesheet" type="text/css" />
 		<!-- endbuild -->
@@ -43,7 +47,7 @@
 
                 <div class="row">
                     <div class="small-12 medium-4 columns">
-                        <div class="xClients__active"><div>{{activeClients}}</div></div>
+                        <div class="xClients__active"><div ng-cloak>{{activeClients}}</div></div>
                         <div class="xClients__desc text-center">ACTIVE CLIENTS</div>
                     </div>
                     <div class="small-12 medium-5 columns">
@@ -56,12 +60,12 @@
                                     animation-iteration-count: 1;
                                 }
                             </style>
-                            <div class="xClients__monthly-item month-{{item.month}} clients{{item.clients}}"ng-repeat="item in last12MO"></div>
+                            <div class="xClients__monthly-item month-{{item.month}} clients{{item.clients}}"ng-repeat="item in last12MO" ng-cloak></div>
                         </div>
                         <div class="xClients__desc text-center">Last 12 months</div>
                     </div>
                     <div class="small-12 medium-3 columns xClients__increase">
-                        <div class="xClients__increase-num">
+                        <div class="xClients__increase-num" ng-cloak>
                             <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                             {{clientsIncrease}} 
                         </div>
@@ -101,7 +105,7 @@
                 </div>
                 <div ng-init="limit = 5">
                     <div class="xLoader" ng-hide="alerts.length"></div>
-                    <div class="xAlerts__item" ng-repeat="item in alerts | limitTo: limit as results">
+                    <div class="xAlerts__item" ng-repeat="item in alerts | limitTo: limit as results" ng-cloak>
                         <div class="row">
                             <div class="small-8 medium-4 large-3 columns">
                                 <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{item.name}}</h3>
