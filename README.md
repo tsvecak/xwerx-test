@@ -1,4 +1,4 @@
-# This repo is created to hold my solution to Xwerx Technical Solution
+# This repo is created to hold my solution to Xwerx Technical Test
 # Requirements:
 ## Use modern JavaScript Framework
 ## Using HTML / CSS / JSON / Ajax call to create chart and grid components
@@ -15,3 +15,11 @@
 
 ## Gulp tasks that I have used within this project are tasks that I am using on most of my projects
 ## Those tasks allow me to have specific CSS and/or JS per template
+
+## v1.0
+# Technical test finished
+# Live preview can be checked on: http://xwerx.tomsvecak.com/
+## Some of the features involved:
+### Animated charts
+### Data generated from JSON using AngularJS
+### Show More / Show All functionality
