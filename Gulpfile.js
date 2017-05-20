@@ -73,7 +73,9 @@ function compileStylesTask(taskName, srcFiles, compiledFileName){
  * Scripts
  */
 compileScriptsTask('scripts', [
-    config.scriptsPath + '/app.js'
+    config.scriptsPath + '/app.js',
+    config.scriptsPath + '/controllers/alertsController.js',
+    config.scriptsPath + '/controllers/clientsController.js'
 ], 'scripts.js', '/js');
 
 /**
@@ -112,7 +114,7 @@ gulp.task('clean', function(cb) {
   return del(
     [
       config.buildPath  + '/css/*'
-      ,config.buildPath + '/js/*'
+      ,config.buildPath + '/js/scripts.js'
     ]
     ,{force: true}
     ,cb
