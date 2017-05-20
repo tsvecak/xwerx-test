@@ -4,6 +4,7 @@
     border-radius: $global-radius;
     width: 100%;
     color: $white;
+    position: relative;
     &__filters {
         padding: 10px;
         border-bottom: 1px solid $xWhiteTransp;
@@ -101,6 +102,7 @@
                 position: relative;
                 width: 25px;
                 height: 20px;
+                margin-left:5px; 
                 &-item {
                     display: inline-block;
                     background:$white;
@@ -165,6 +167,9 @@
         padding: 1rem;
         h3 {
             margin: 0;
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 }

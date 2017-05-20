@@ -100,24 +100,27 @@
                         <div class="small-12 columns xAlerts__filters-importance text-right small-text-left">IMPORTANCE <i class="fa fa-caret-down" aria-hidden="true"></i></div>
                     </div>
                 </div>
-                <div class="xAlerts__item" ng-repeat="item in alerts">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{item.name}}</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">{{item.description}}</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">{{item.date}}</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">{{item.importance | uppercase}} 
-                            <span class="importance {{item.importance | lowercase}}">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
+                <div ng-init="limit = 5">
+                    <div class="xLoader" ng-hide="alerts.length"></div>
+                    <div class="xAlerts__item" ng-repeat="item in alerts | limitTo: limit as results">
+                        <div class="row">
+                            <div class="small-8 medium-4 large-3 columns">
+                                <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{item.name}}</h3>
+                            </div>
+                            <div class="small-12 medium-4 large-5 columns">{{item.description}}</div>
+                            <div class="medium-2 large-2 columns xAlerts__item-date">{{item.date}}</div>
+                            <div class="medium-2 large-2 columns xAlerts__item-importance">{{item.importance | uppercase}} 
+                                <span class="importance {{item.importance | lowercase}}">
+                                    <span class="importance-item one"></span>
+                                    <span class="importance-item two"></span>
+                                    <span class="importance-item three"></span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="xAlerts__seeMore">SEE MORE <i class="fa fa-caret-down" aria-hidden="true"></i></div>
-                <div class="xAlerts__viewAll"><h3>VIEW ALL</h3></div>
+                <div class="xAlerts__seeMore" ng-hide="results.length === alerts.length" ng-click="limit = limit +5">SEE MORE <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="xAlerts__viewAll" ng-click="limit = alerts.length"><h3>VIEW ALL</h3></div>
             </section>
             <!-- END xAlerts -->
         </div>

@@ -14,6 +14,8 @@ xwerxApp.controller('xwerxControllerAlerts', function($scope, $http) {
         // Last 12 months
         $scope.alerts = response.data.alerts;
 
+        $scope.maxAlerts=5;
+
     }, function errorCallback(response) {
         console.log('Alerts Fail');
     });
