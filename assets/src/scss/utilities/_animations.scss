@@ -1,5 +1,6 @@
 // Animations
 
+// Rotate
 .rotate {
     &:hover {
         animation: rotation 1s linear;
@@ -14,6 +15,7 @@
     }
 }
 
+// Spaceboots - shake
 .spaceboots {
     &:hover {
         animation: spaceboots 0.82s;
@@ -37,6 +39,8 @@
   }
 }
 
+
+// Fade In
 @keyframes fade-in {
   0%,
   90% {
@@ -126,4 +130,11 @@
     50%, 50%  {background:$xBlue; height:50px}
     75%, 75%  {background:$xBlue; height:75px}
     100%, 100% {background:$xBlue; height:120px}
+}
+
+// Active Clients rotate
+@keyframes rotate-one {
+    100% {
+        transform: rotate(135deg);
+    }
 }

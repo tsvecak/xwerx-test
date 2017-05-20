@@ -37,23 +37,16 @@
             <!-- START xClients -->
             <section class="xClients" ng-controller="xwerxControllerClients">
                 <div class="row">
-                    <div class="small-6 columns">Clients <i class="fa fa-caret-right" aria-hidden="true"></i></div>
+                    <div class="small-6 columns"><b>Clients</b> <i class="fa fa-caret-right" aria-hidden="true"></i></div>
                     <div class="small-6 columns text-right"><i class="fa fa-cog rotate" aria-hidden="true"></i></div>
                 </div>
 
                 <div class="row">
                     <div class="small-12 medium-4 columns">
-                        <style>
-                            @keyframes rotate-one {
-                                100% {
-                                    transform: rotate(135deg);
-                                }
-                            }
-                        </style>
                         <div class="xClients__active"><div>{{activeClients}}</div></div>
-                        <div class="xClients__active-desc text-center">ACTIVE CLIENTS</div>
+                        <div class="xClients__desc text-center">ACTIVE CLIENTS</div>
                     </div>
-                    <div class="small-12 medium-4 columns">
+                    <div class="small-12 medium-5 columns">
                         <div class="xClients__monthly">
                             <style>
                                 /*Prevent animation from repeating*/
@@ -65,9 +58,15 @@
                             </style>
                             <div class="xClients__monthly-item month-{{item.month}} clients{{item.clients}}"ng-repeat="item in last12MO"></div>
                         </div>
-                        <div class="xClients__active-desc text-center">Last 12 months</div>
+                        <div class="xClients__desc text-center">Last 12 months</div>
                     </div>
-                    <div class="small-12 medium-4 columns">{{clientsIncrease}} Increase</div>
+                    <div class="small-12 medium-3 columns xClients__increase">
+                        <div class="xClients__increase-num">
+                            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                            {{clientsIncrease}} 
+                        </div>
+                        <div class="xClients__desc text-center">Increase</div>
+                    </div>
                 </div>
 
             </section>
