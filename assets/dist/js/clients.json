@@ -1,0 +1,20 @@
+{
+    "clients": {
+        "activeClients": 203,
+        "clientsIncrease": 104,
+        "lastYear": [
+            {"month": 1,"clients": 130},
+            {"month": 2,"clients": 110},
+            {"month": 3,"clients": 120},
+            {"month": 4,"clients": 130},
+            {"month": 5,"clients": 170},
+            {"month": 6,"clients": 150},
+            {"month": 7,"clients": 130},
+            {"month": 8,"clients": 170},
+            {"month": 9,"clients": 160},
+            {"month": 10,"clients": 190},
+            {"month": 11,"clients": 130},
+            {"month": 12,"clients": 150}
+        ]
+    }
+}

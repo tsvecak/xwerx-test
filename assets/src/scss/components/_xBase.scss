@@ -1,0 +1,23 @@
+// Base styles
+
+body {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.xLoader {
+    border: 16px solid $xGrey;
+    border-radius: 50%;
+    border-top: 16px solid $xDarkBlue;
+    border-right: 16px solid $xBlue;
+    border-bottom: 16px solid $white;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

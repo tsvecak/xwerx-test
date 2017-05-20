@@ -1,0 +1,140 @@
+// Animations
+
+// Rotate
+.rotate {
+    &:hover {
+        animation: rotation 1s linear;
+    }
+}
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+// Spaceboots - shake
+.spaceboots {
+    &:hover {
+        animation: spaceboots 0.82s;
+    }
+}
+@keyframes spaceboots {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
+
+// Fade In
+@keyframes fade-in {
+  0%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Bar Charts animations
+@-webkit-keyframes chartAnime100 {
+    from, 10%  {background:$xBlue; height:0px}
+    50%, 50%  {background:$xBlue; height:5px} 
+    100%, 100% {background:$xBlue; height:10px}
+}
+@-webkit-keyframes chartAnime110 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:5px} 
+    50%, 50%  {background:$xBlue; height:10px}
+    100%, 100% {background:$xBlue; height:20px}
+}
+@-webkit-keyframes chartAnime120 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:10px} 
+    50%, 50%  {background:$xBlue; height:20px}
+    100%, 100% {background:$xBlue; height:30px}
+}
+@-webkit-keyframes chartAnime130 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:20px} 
+    50%, 50%  {background:$xBlue; height:30px}
+    100%, 100% {background:$xBlue; height:40px}
+}
+@-webkit-keyframes chartAnime140 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:10px} 
+    50%, 50%  {background:$xBlue; height:20px}
+    75%, 75%  {background:$xBlue; height:35px}
+    100%, 100% {background:$xBlue; height:50px}
+}
+@-webkit-keyframes chartAnime150 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:10px} 
+    50%, 50%  {background:$xBlue; height:25px}
+    75%, 75%  {background:$xBlue; height:40px}
+    100%, 100% {background:$xBlue; height:60px}
+}
+@-webkit-keyframes chartAnime160 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:20px} 
+    50%, 50%  {background:$xBlue; height:40px}
+    75%, 75%  {background:$xBlue; height:60px}
+    100%, 100% {background:$xBlue; height:70px}
+}
+@-webkit-keyframes chartAnime170 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:20px} 
+    50%, 50%  {background:$xBlue; height:40px}
+    75%, 75%  {background:$xBlue; height:60px}
+    100%, 100% {background:$xBlue; height:80px}
+}
+@-webkit-keyframes chartAnime180 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:20px} 
+    50%, 50%  {background:$xBlue; height:50px}
+    75%, 75%  {background:$xBlue; height:70px}
+    100%, 100% {background:$xBlue; height:90px}
+}
+@-webkit-keyframes chartAnime190 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:25px} 
+    50%, 50%  {background:$xBlue; height:50px}
+    75%, 75%  {background:$xBlue; height:75px}
+    100%, 100% {background:$xBlue; height:100px}
+}
+@-webkit-keyframes chartAnime195 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:25px} 
+    50%, 50%  {background:$xBlue; height:50px}
+    75%, 75%  {background:$xBlue; height:75px}
+    100%, 100% {background:$xBlue; height:110px}
+}
+@-webkit-keyframes chartAnime200 {
+    from, 15%  {background:$xBlue; height:0px}
+    25%, 25%  {background:$xBlue; height:25px} 
+    50%, 50%  {background:$xBlue; height:50px}
+    75%, 75%  {background:$xBlue; height:75px}
+    100%, 100% {background:$xBlue; height:120px}
+}
+
+// Active Clients rotate
+@keyframes rotate-one {
+    100% {
+        transform: rotate(135deg);
+    }
+}

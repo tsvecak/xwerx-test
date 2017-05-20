@@ -1,0 +1,28 @@
+/*
+** Main SCSS file
+*/
+
+/* Variables */
+// Colors
+@import "variables/colors";
+// Default
+@import "variables/default";
+
+/* Utilities */
+// Foundation
+@import "/assets/src/scss/utilities/foundation.min.css";
+// HelpClasses
+@import "utilities/helpClasses";
+// Animations
+@import "utilities/animations";
+
+
+/* Components */
+// Base styles
+@import "components/xBase";
+
+// Clients
+@import "components/xClients";
+
+// Alerts
+@import "components/xAlerts";
