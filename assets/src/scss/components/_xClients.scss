@@ -1,12 +1,95 @@
-// Live Feed component SCSS
+// Clients component SCSS
 .xClients {
     background: $xDarkBlue;
     border-radius: $global-radius;
-    padding: 1rem;
+    padding: 1rem 1rem 3rem;
     color: $xBlue;
     width: 100%;
     text-transform: uppercase;
-    @media (min-width: 400px) {
+    margin-bottom: 2rem;
+    &__active {
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+        width: 250px;
+        height: 125px;
+        overflow: hidden;
         
+        &-desc {
+            color: $white;
+            padding: 5px 0;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+        }
+        &::before {
+            content: '';
+            width: inherit;
+            height: inherit;
+            border: 45px solid $xGrey;
+            border-bottom: none;
+            border-top-left-radius: 175px;
+            border-top-right-radius: 175px;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            border: 45px solid;
+            border-top: none;
+            border-bottom-left-radius: 175px;
+            border-bottom-right-radius: 175px;
+            transform-origin: 50% 0;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            z-index: 4;
+            border-color: $xBlue;
+            animation-name: rotate-one;
+        }
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1;
+            text-align: center;
+            span {
+                font-size: 1rem;
+                display: block;
+            }
+        }
+    }
+    &__monthly {
+        text-align: center;
+        &-item {
+            background: $xGrey;
+            height: 120px;
+            width: 7px;
+            display: inline-block;
+            position: relative;
+            border-radius: $global-radius;
+            margin: 0 2px;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                background: $white;
+                width: 7px;
+                border-radius: $global-radius;
+            }
+        }
     }
 }

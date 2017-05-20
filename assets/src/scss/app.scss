@@ -2,23 +2,27 @@
 ** Main SCSS file
 */
 
-/* Utilities */
-// Normalize
-@import "/assets/src/scss/utilities/normalize.css";
-// Skeleton
-@import "/assets/src/scss/utilities/foundation.min.css";
-// HelpClasses
-@import "utilities/helpClasses";
-
 /* Variables */
 // Colors
 @import "variables/colors";
 // Default
 @import "variables/default";
 
+/* Utilities */
+// Foundation
+@import "/assets/src/scss/utilities/foundation.min.css";
+// HelpClasses
+@import "utilities/helpClasses";
+// Animations
+@import "utilities/animations";
+
+
 /* Components */
 // Base styles
 @import "components/xBase";
 
-// Live Feed xClients
+// Clients
 @import "components/xClients";
+
+// Alerts
+@import "components/xAlerts";
