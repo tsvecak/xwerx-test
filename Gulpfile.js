@@ -111,8 +111,8 @@ gulp.task('build', function(cb) {
 gulp.task('clean', function(cb) {
   return del(
     [
-      config.buildPath  + '/**/*'
-      ,config.buildPath + '/.*'
+      config.buildPath  + '/css/*'
+      ,config.buildPath + '/js/*'
     ]
     ,{force: true}
     ,cb
