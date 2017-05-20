@@ -98,72 +98,48 @@
                 display: inline-block;
                 width:auto;
                 background:transparent;
+                position: relative;
+                width: 25px;
+                height: 20px;
                 &-item {
                     display: inline-block;
                     background:$white;
+                    border-radius: 2px;
+                    width:5px;
+                    position: absolute;
+                    bottom: 0;
                     @media screen and (max-width: 39.9375em) {
                         &:nth-child(2) {
                             margin: 0 3px;
                         }
                     }
                 }
-                &.very {
-                    .one{
-                        height:5px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
+                .one{
+                    height:7px;
+                    left: 0;
+                }
 
-                    .two{
-                        height:10px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
+                .two{
+                    height:10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
 
-                    .three{
-                        height:15px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
+                .three{
+                    height:16px;
+                    right: 0;
                 }
                 &.middle {
-                    .one{
-                        height:5px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
-
-                    .two{
-                        height:10px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
-
                     .three{
-                        height:15px;
-                        width:5px;
-                        border-radius: 2px;
                         background: $xWhiteTransp;
                     }
                 }
                 &.low {
-                    .one{
-                        height:5px;
-                        width:5px;
-                        border-radius: 2px;
-                    }
-
                     .two{
-                        height:10px;
-                        width:5px;
-                        border-radius: 2px;
                         background: $xWhiteTransp;
                     }
 
                     .three{
-                        height:15px;
-                        width:5px;
-                        border-radius: 2px;
                         background: $xWhiteTransp;
                     }
                 }
