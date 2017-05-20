@@ -86,10 +86,47 @@
                 content: '';
                 position: absolute;
                 bottom: 0;
+                left: 0;
                 background: $white;
                 width: 7px;
                 border-radius: $global-radius;
             }
         }
+    }
+}
+.clients {
+    &100:after {
+        animation: chartAnime100 .5s;
+    }
+
+    &110:after {
+        animation: chartAnime110 .5s;
+    }
+    &120:after {
+        animation: chartAnime120 .5s;
+    }
+    &130:after {
+        animation: chartAnime130 .5s;
+    }
+    &140:after {
+        animation: chartAnime140 .5s;
+    }
+    &150:after {
+        animation: chartAnime150 .5s;
+    }
+    &160:after {
+        animation: chartAnime160 .5s;
+    }
+    &170:after {
+        animation: chartAnime170 .5s;
+    }
+    &180:after {
+        animation: chartAnime180 .5s;
+    }
+    &190:after {
+        animation: chartAnime190 .5s;
+    }
+    &200:after {
+        animation: chartAnime200 .5s;
     }
 }

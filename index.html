@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="xwerxApp"> <!--<![endif]-->
 
 	<head>
 		<meta charset="utf-8">
@@ -35,7 +35,7 @@
 	<body>
         <div class="row">
             <!-- START xClients -->
-            <section class="xClients">
+            <section class="xClients" ng-controller="xwerxControllerClients">
                 <div class="row">
                     <div class="small-6 columns">Clients <i class="fa fa-caret-right" aria-hidden="true"></i></div>
                     <div class="small-6 columns text-right"><i class="fa fa-cog rotate" aria-hidden="true"></i></div>
@@ -50,77 +50,31 @@
                                 }
                             }
                         </style>
-                        <div class="xClients__active"><div>203</div></div>
+                        <div class="xClients__active"><div>{{activeClients}}</div></div>
                         <div class="xClients__active-desc text-center">ACTIVE CLIENTS</div>
                     </div>
                     <div class="small-12 medium-4 columns">
                         <div class="xClients__monthly">
                             <style>
-                                .month-1:after {
-                                    animation: chartAnime10 .5s;
-                                }
-                                .month-2:after {
-                                    animation: chartAnime20 .5s;
-                                }
-                                .month-3:after {
-                                    animation: chartAnime50 .5s;
-                                }
-                                .month-4:after {
-                                    animation: chartAnime70 .5s;
-                                }
-                                .month-5:after {
-                                    animation: chartAnime80 .5s;
-                                }
-                                .month-6:after {
-                                    animation: chartAnime30 .5s;
-                                }
-                                .month-7:after {
-                                    animation: chartAnime40 .5s;
-                                }
-                                .month-8:after {
-                                    animation: chartAnime60 .5s;
-                                }
-                                .month-9:after {
-                                    animation: chartAnime90 .5s;
-                                }
-                                .month-10:after {
-                                    animation: chartAnime110 .5s;
-                                }
-                                .month-11:after {
-                                    animation: chartAnime70 .5s;
-                                }
-                                .month-12:after {
-                                    animation: chartAnime100 .5s;
-                                }
+                                /*Prevent animation from repeating*/
                                 .xClients__monthly-item:after {
                                     animation-timing-function:linear;
                                     animation-fill-mode:forwards;
                                     animation-iteration-count: 1;
                                 }
                             </style>
-                            <div class="xClients__monthly-item month-1"></div>
-                            <div class="xClients__monthly-item month-2"></div>
-                            <div class="xClients__monthly-item month-3"></div>
-                            <div class="xClients__monthly-item month-4"></div>
-                            <div class="xClients__monthly-item month-5"></div>
-                            <div class="xClients__monthly-item month-6"></div>
-                            <div class="xClients__monthly-item month-7"></div>
-                            <div class="xClients__monthly-item month-8"></div>
-                            <div class="xClients__monthly-item month-9"></div>
-                            <div class="xClients__monthly-item month-10"></div>
-                            <div class="xClients__monthly-item month-11"></div>
-                            <div class="xClients__monthly-item month-12"></div>
+                            <div class="xClients__monthly-item month-{{item.month}} clients{{item.clients}}"ng-repeat="item in last12MO"></div>
                         </div>
-                        <div class="xClients__active-desc text-center">ACTIVE CLIENTS</div>
+                        <div class="xClients__active-desc text-center">Last 12 months</div>
                     </div>
-                    <div class="small-12 medium-4 columns">105 Increase</div>
+                    <div class="small-12 medium-4 columns">{{clientsIncrease}} Increase</div>
                 </div>
 
             </section>
             <!-- END xClients -->
         
             <!-- START xAlerts -->
-            <section class="xAlerts">
+            <section class="xAlerts" ng-controller="xwerxControllerAlerts">
                 <div class="xAlerts__filters">
                     <div class="row">
                         <div class="small-12 medium-5 columns"><h3>ALERTS<span>Latest Alerts(41)</span></h3></div>
@@ -146,95 +100,15 @@
                         <div class="small-12 columns xAlerts__filters-importance text-right small-text-left">IMPORTANCE <i class="fa fa-caret-down" aria-hidden="true"></i></div>
                     </div>
                 </div>
-                <div class="xAlerts__item" ng-repeat="">
+                <div class="xAlerts__item" ng-repeat="item in alerts">
                     <div class="row">
                         <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
+                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{item.name}}</h3>
                         </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance middle">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="xAlerts__item" ng-repeat="">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance low">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="xAlerts__item" ng-repeat="">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance middle">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="xAlerts__item" ng-repeat="">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance very">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="xAlerts__item" ng-repeat="">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance low">
-                                <span class="importance-item one"></span>
-                                <span class="importance-item two"></span>
-                                <span class="importance-item three"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="xAlerts__item" ng-repeat="">
-                    <div class="row">
-                        <div class="small-8 medium-4 large-3 columns">
-                            <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Adam Compton</h3>
-                        </div>
-                        <div class="small-12 medium-4 large-5 columns">Adam's End of Year Review coming up</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-date">Feb 03</div>
-                        <div class="medium-2 large-2 columns xAlerts__item-importance">Low 
-                            <span class="importance middle">
+                        <div class="small-12 medium-4 large-5 columns">{{item.description}}</div>
+                        <div class="medium-2 large-2 columns xAlerts__item-date">{{item.date}}</div>
+                        <div class="medium-2 large-2 columns xAlerts__item-importance">{{item.importance | uppercase}} 
+                            <span class="importance {{item.importance | lowercase}}">
                                 <span class="importance-item one"></span>
                                 <span class="importance-item two"></span>
                                 <span class="importance-item three"></span>
